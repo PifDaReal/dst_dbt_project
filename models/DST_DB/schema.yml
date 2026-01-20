@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: DST_DB # Nom logique pour dbt
+    description: "Données du schéma STAR chargées manuellement"
+    database: DST_DB
+    schema: STAR
+    tables:
+      - name: FACT_TRACK_CD
+        description: "Table de faits contenant les mesures des morceaux"
+      
+      - name: DIM_ALBUM_CD
+        description: "Dimension des albums"
+
+      - name: DIM_ARTIST
+        description: "Dimension des artistes"
+
+      - name: DIM_GENRE
+        description: "Dimension des genres musicaux"
+
+      - name: DIM_TIME
+        description: "Dimension temporelle"
+
+      - name: DIM_PLAYLIST
+        description: "Dimension des playlists"
+
+      - name: BRIDGE_PLAYLISTTRACK_CD
+        description: "Table de pont pour les playlists"
